@@ -16,7 +16,7 @@ describe('Invalid login flow', () => {
         cy.visit('https://www.saucedemo.com/');
         cy.get(usernameField).type(username);
         cy.get(loginButton).click();
-        cy.get(errorMessage).invoke('text').should('match', /^Password is required$/);
+        cy.get(errorMessage).invoke('text').should('match', /^The Password is required$/);
     });
 
     it('Invalid login - Empty username', () => {
